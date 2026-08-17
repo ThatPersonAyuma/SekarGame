@@ -1,0 +1,6 @@
+.*
+!.gitignore
+# Dependencies
+node_modules/
+jspm_packages/
+web_modules/

@@ -33,3 +33,6 @@ Except for Boot.js and Preload.js, all is scene configuration. Treat one file as
 
 For Boot.js => sets up system settings and loads tiny assets needed for a loading screen
 For Preload.js => displays that loading screen and fetches all heavy game files
+
+<h3>DEVELOPMENT</h3>
+Go to **Preloader.js**, change the target in the **transition method**. Change it to the **Scene Key**, see the scene key in the super method.

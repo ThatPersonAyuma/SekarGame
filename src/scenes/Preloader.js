@@ -60,6 +60,7 @@ export class Preloader extends Scene
         //  Or we could use a Scene transition to fade between the two scenes:
 
         this.scene.transition({
+            // Change 
             target: 'MainMenu',
             duration: 1000,
             moveBelow: true,
