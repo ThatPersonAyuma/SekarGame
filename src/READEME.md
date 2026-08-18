@@ -1,25 +1,26 @@
 <h1>Structure of Folder</h1>
-``` shell   
+
+```
 /src
-│   main.js
-│   READEME.md
-│   
-├───controllers
-│       AIHandler.js
-│       Database.js
-│       
-└───scenes
-        Boot.js
-        ChooseRole.js
-        GameEnd.js
-        MainMenu.js
-        PlayerAIDashboard.js
-        PlayerSubProblem.js
-        Preloader.js
-        RoleDB.js
-        RoleLog.js
-        RoleServerAdm.js
-        Waiting.js
+│   main.js 
+│   READEME.md  
+│     
+├───controllers  
+│       AIHandler.js  
+│       Database.js  
+│         
+└───scenes  
+        Boot.js  
+        ChooseRole.js  
+        GameEnd.js  
+        MainMenu.js  
+        PlayerAIDashboard.js  
+        PlayerSubProblem.js  
+        Preloader.js  
+        RoleDB.js  
+        RoleLog.js  
+        RoleServerAdm.js  
+        Waiting.js  
 ```
 
 <h2>main.js</h2>

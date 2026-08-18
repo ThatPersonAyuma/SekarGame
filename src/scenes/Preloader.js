@@ -10,19 +10,34 @@ export class Preloader extends Scene
     init ()
     {
         //  We loaded this image in our Boot Scene, so we can display it here
-        this.add.image(512, 384, 'preloader');
-
+        const bgImage = this.add.image(this.scale.width/2, this.scale.height/2, 'preloader');
+        let targetWidth = 1920;
+        bgImage.scaleX = targetWidth / bgImage.width;
+        bgImage.scaleY = bgImage.scaleX;
         //  A simple progress bar. This is the outline of the bar.
-        this.add.rectangle(512, 384, 468, 32).setStrokeStyle(1, 0xffffff);
+        // this.add.rectangle(512, 384, 468, 32).setStrokeStyle(1, 0xffffff);
+        // const bar = this.add.rectangle(512-230, 384, 4, 28, 0xffffff);
 
+        // //  Use the 'progress' event emitted by the LoaderPlugin to update the loading bar
+        // this.load.on('progress', (progress) => {
+
+        //     //  Update the progress bar (our bar is 464px wide, so 100% = 464px)
+        //     bar.width = 4 + (460 * progress);
+
+        // });
+        const barXSize = 936
+        const barYSize = 64
+        const wOuter = this.scale.width/2
+        const hOuter = this.scale.height/2
+        this.add.rectangle(wOuter, hOuter, barXSize, barYSize).setStrokeStyle(1, 0xffffff);
         //  This is the progress bar itself. It will increase in size from the left based on the % of progress.
-        const bar = this.add.rectangle(512-230, 384, 4, 28, 0xffffff);
+        const bar = this.add.rectangle(wOuter-barXSize/2, hOuter, 8, 56, 0xffffff);
 
         //  Use the 'progress' event emitted by the LoaderPlugin to update the loading bar
         this.load.on('progress', (progress) => {
 
             //  Update the progress bar (our bar is 464px wide, so 100% = 464px)
-            bar.width = 4 + (460 * progress);
+            bar.width = 4 + (930 * progress);
 
         });
     }
@@ -34,7 +49,16 @@ export class Preloader extends Scene
 
         this.load.image('background', 'background.png');
         this.load.image('logo', 'logo.png');
-        // this.load.atlas('coin', 'coin.png', 'coin.json');
+        this.load.video('Matrix1', 'Matrix1.webm');
+        this.load.video('Matrix2', 'Matrix2.webm');
+        this.load.image('LandingPage', 'LandingPage.webp');
+        this.load.image('RoleSelect', 'RoleSelect.webp');
+        this.load.image('WaitingForGm', 'Loading.webp');
+        this.load.image('PlayerMain', 'MainPage.webp');
+        // this.load.image('MainPageTopLayer', 'LandingPageTopLayer.webp');
+        this.load.font('NFS', 'fonts/NFS.ttf', 'truetype');
+        this.load.font('ContourGenerator', 'fonts/ContourGenerator.otf', 'opentype');
+        this.load.font('DreamMMA', 'fonts/DreamMMA.ttf', 'truetype');
     }
 
     create ()
@@ -62,6 +86,7 @@ export class Preloader extends Scene
         this.scene.transition({
             // Change 
             target: 'MainMenu',
+            // target: 'PlayerAIDashboard',
             duration: 1000,
             moveBelow: true,
             onUpdate: (progress) => {
