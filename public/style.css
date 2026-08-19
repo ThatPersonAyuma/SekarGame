@@ -18,6 +18,8 @@ body {
     font-family: 'Inter', sans-serif; 
 }
 
+@import url('https://fonts.cdnfonts.com/css/xirod');
+
 /* Fallback fallback strategy for modern browsers supporting variable fonts */
 @supports (font-variation-settings: normal) {
     :root { 

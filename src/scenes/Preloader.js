@@ -55,10 +55,23 @@ export class Preloader extends Scene
         this.load.image('RoleSelect', 'RoleSelect.webp');
         this.load.image('WaitingForGm', 'Loading.webp');
         this.load.image('PlayerMain', 'MainPage.webp');
+
+        // SVG Icon
+        this.load.svg('DbAdmin', 'database.svg', { width: 215, height: 215 });
+        this.load.svg('ServerAdmin', 'server.svg', { width: 185, height: 185 });
+        this.load.svg('LogAdmin', 'logAdmin.svg', { width: 281, height: 281 });
+        this.load.svg('LogAdminGreen', 'logAdminGreen.svg', { width: 281, height: 281 });
+
+        // Icon
+        this.load.image('ai-avatar', 'icons/ai.webp');
+        this.load.image('user-avatar', 'icons/anon.webp');
+        this.load.image('AIButton', 'icons/aiButton.webp');
+
         // this.load.image('MainPageTopLayer', 'LandingPageTopLayer.webp');
         this.load.font('NFS', 'fonts/NFS.ttf', 'truetype');
         this.load.font('ContourGenerator', 'fonts/ContourGenerator.otf', 'opentype');
         this.load.font('DreamMMA', 'fonts/DreamMMA.ttf', 'truetype');
+        this.load.font('Xirod', 'fonts/Xirod.ttf', 'truetype');
     }
 
     create ()
@@ -85,8 +98,8 @@ export class Preloader extends Scene
 
         this.scene.transition({
             // Change 
-            target: 'MainMenu',
-            // target: 'PlayerAIDashboard',
+            // target: 'MainMenu',
+            target: 'PlayerAIDashboard',
             duration: 1000,
             moveBelow: true,
             onUpdate: (progress) => {
