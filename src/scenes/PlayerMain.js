@@ -21,7 +21,8 @@ export class PlayerMain extends Scene
         this.add.image(this.scale.width/2, this.scale.height/2, 'PlayerMain');
         setupTimeText(this);
 
-        createButtonIcon(this, 214, 460, "LogAdmin");
+        createButtonIcon(this, 214, 460, "LogAdmin")
+            .on('pointerdown', () => this.scene.start('RoleLog'));
         this.add.text(340, 898, "LOG", { 
             font: '56px ContourGenerator',
             color: '#FFFFFF',
@@ -37,7 +38,8 @@ export class PlayerMain extends Scene
             align: "center"
         });
 
-        createButtonIcon(this, 757, 460, "DbAdmin");
+        createButtonIcon(this, 757, 460, "DbAdmin")
+            .on('pointerdown', () => this.scene.start('RoleDB'));
         this.add.text(786, 905, "DATABASE", { 
             font: '51px ContourGenerator',
             color: '#FFFFFF',
@@ -53,7 +55,8 @@ export class PlayerMain extends Scene
             align: "center"
         })
 
-        createButtonIcon(this, 1320, 460, "ServerAdmin");
+        createButtonIcon(this, 1320, 460, "ServerAdmin")
+            .on('pointerdown', () => this.scene.start('RoleServerAdm'));
         this.add.text(1378, 905, "SERVER", { 
             font: '54px ContourGenerator',
             color: '#FFFFFF',

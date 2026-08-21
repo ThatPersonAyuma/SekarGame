@@ -1,7 +1,5 @@
 import { Boot } from './scenes/Boot';
-import { ClickerGame } from '../.ignore/zClickerGame';
 import { Game } from 'phaser';
-import { GameOver } from '../.ignore/zGameOver';
 import { MainMenu } from './scenes/MainMenu';
 import { Preloader } from './scenes/Preloader';
 import { PlayerAIDashboard } from './scenes/PlayerAIDashboard';
@@ -10,6 +8,9 @@ import * as Phaser from 'phaser';
 import { RoleSelect } from './scenes/RoleSelect';
 import { WaitingForGm } from './scenes/WaitingForGm';
 import { PlayerMain } from './scenes/PlayerMain';
+import { RoleLog } from './scenes/RoleLog';
+import { RoleDB } from './scenes/RoleDB';
+import { RoleServerAdm } from './scenes/RoleServerAdm';
 // import { createContext } from 'react';
 
 //  Find out more information about the Game Config at: https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
@@ -30,11 +31,13 @@ const config = {
         Boot,
         Preloader,
         MainMenu,
-        GameOver,
         PlayerAIDashboard,
         RoleSelect,
         WaitingForGm,
-        PlayerMain
+        PlayerMain,
+        RoleLog,
+        RoleDB,
+        RoleServerAdm
     ]
 };
 

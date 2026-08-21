@@ -99,7 +99,7 @@ export class Preloader extends Scene
         this.scene.transition({
             // Change 
             // target: 'MainMenu',
-            target: 'PlayerAIDashboard',
+            target: 'MainMenu',
             duration: 1000,
             moveBelow: true,
             onUpdate: (progress) => {

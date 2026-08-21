@@ -21,7 +21,7 @@ export class RoleSelect extends Scene
         this.add.image(this.scale.width/2, this.scale.height/2, 'RoleSelect');
         setupTimeText(this);
             
-        this.add.text(107, 247, "PILIH ROLE", { 
+        this.add.text(107, 247, "CHOOSE ROLE", { 
             font: '65px NFS',
             color: '#FFFFFF',
             letterSpacing: 0.07,
